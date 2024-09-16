@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Horizon Bank - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="image.png" alt="Bank Logo">
+        <h1>Krishna Horizon Bank</h1>
+    </div>
+
+    <div class="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="deposit.html">Deposit</a>
+        <a href="loan.html">Loans</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+    <div class="container">
+        <!-- Welcoming Text -->
+        <div class="welcome-text">
+            <h2>Welcome to Krishna Horizon Bank</h2>
+            <p>Your trusted partner in financial success. Please log in to access your account and manage your banking needs with ease.</p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-title">Customer Login</div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="customerId">Customer ID</label>
+                <input type="text" id="customerId" name="customerId" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Krishna Horizon Bank. All rights reserved 22MIC0022. | 
+        <a href="contact.html" style="color: #fff; text-decoration: underline;">Contact Us</a> | 
+        Terms & Conditions | Privacy Policy
+    </div>
+
+    <script>
+        // Login Form Validation
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var customerId = document.getElementById('customerId').value;
+            var password = document.getElementById('password').value;
+
+            if (customerId === '' || password === '') {
+                alert('Please enter both Customer ID and password.');
+                return false;
+            }
+
+            // This is where you'd add code to authenticate the user
+            // For this example, we'll just show a success message
+            alert('Login successful!');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
